@@ -9,10 +9,10 @@ const QuestionForm = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => console.log(data);
- 
+
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <h2 className="my-6 text-2xl">Not sure who to ask?</h2>
+      <h2 className="my-6 text-xl">Not sure who to ask?</h2>
       <div className="my-4">
         <div>
           <label>Question:*</label>
@@ -36,7 +36,20 @@ const QuestionForm = () => {
             <label>Related Area (if known)</label>
           </div>
           <div className="my-2">
-            <Input {...register("area")} />
+            <select
+              {...register("area")}
+              className="border border-main-light-80 leading-[18px] p-2.5 rounded-sm outline-none 
+          text-grey-dark w-full 
+          focus:border-blue-dfx focus:shadow-input focus:shadow-blue-dfx"
+            >
+              <option value="">Select from dropdown</option>
+              <option value="technicalSupport">Technical Support</option>
+              <option value="development">Development</option>
+              <option value="humanResources">Human Resources</option>
+              <option value="projectManagement">Project Management</option>
+              <option value="marketing">Sales and Marketing</option>
+              <option value="general">General Information</option>
+            </select>
           </div>
         </div>
         <div className="flex-1">

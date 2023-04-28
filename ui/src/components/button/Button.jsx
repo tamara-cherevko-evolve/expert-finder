@@ -15,14 +15,15 @@ export const Button = ({
 }) => {
   const classes = twMerge(
     `inline-flex
+      ${styles.btn} 
       ${
         isLoading
-          ? "cursor-wait"
+          ? "cursor-wait !text-transparent"
           : isDisabled
           ? "cursor-not-allowed"
           : "cursor-pointer"
       }
-      ${styles.btn} 
+      
       ${full && "w-full"}
       ${className}
       `
@@ -46,6 +47,7 @@ export const Button = ({
         <Loading
           size="1.5rem"
           style={{
+            color: "white",
             position: "absolute",
             top: "50%",
             left: "50%",
