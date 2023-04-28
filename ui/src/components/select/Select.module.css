@@ -1,0 +1,4 @@
+.select {
+  -webkit-tap-highlight-color: transparent;
+  @apply appearance-none bg-[url('../../assets/icons/arrow.svg')] bg-[length:16px_10px] bg-no-repeat bg-[center_right_1rem]  leading-[18px] p-2.5 rounded-sm outline-none w-full focus:shadow-input;
+}

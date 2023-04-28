@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { Button } from "./components/button/Button";
-import { Input } from "./components/input/Input";
+import { Textarea } from "./components/textarea/Textarea";
+import selectStyles from "./components/select/Select.module.css";
 
 const QuestionForm = () => {
   const {
@@ -18,7 +19,7 @@ const QuestionForm = () => {
           <label>Question:*</label>
         </div>
         <div className="my-2">
-          <Input
+          <Textarea
             {...register("question", {
               required: true,
             })}
@@ -36,12 +37,7 @@ const QuestionForm = () => {
             <label>Related Area (if known)</label>
           </div>
           <div className="my-2">
-            <select
-              {...register("area")}
-              className="border border-main-light-80 leading-[18px] p-2.5 rounded-sm outline-none 
-          text-grey-dark w-full 
-          focus:border-blue-dfx focus:shadow-input focus:shadow-blue-dfx"
-            >
+            <select {...register("area")} className={selectStyles.select}>
               <option value="">Select from dropdown</option>
               <option value="technicalSupport">Technical Support</option>
               <option value="development">Development</option>
@@ -57,7 +53,17 @@ const QuestionForm = () => {
             <label>Urgency*</label>
           </div>
           <div className="my-2">
-            <Input {...register("urgency")} />
+            <select {...register("urgency")} className={selectStyles.select}>
+              <option value="">Select from dropdown</option>
+              <option value="standard">Standard</option>
+              <option value="important">Important</option>
+              <option
+                value="import { selectStyles } from '/select/Select.module.css';
+urgent"
+              >
+                Urgent
+              </option>
+            </select>
           </div>
         </div>
       </div>
