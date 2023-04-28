@@ -47,6 +47,7 @@ module.exports = {
       colors: {
         primary: "#0057FF",
         "primary-dark": "#0046CC",
+        orange: "#FF7A00",
       },
       fontSize: {
         xxs: ["9px", { lineHeight: "120%" }],
