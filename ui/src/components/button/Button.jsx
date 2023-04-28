@@ -8,7 +8,6 @@ export const Button = ({
   isLoading,
   isDisabled = false,
   full = false,
-  variant = "primary",
   onClick = () => {
     console.info("clicked");
   },
@@ -23,8 +22,7 @@ export const Button = ({
           ? "cursor-not-allowed"
           : "cursor-pointer"
       }
-      ${styles.btn}
-      ${styles["btn-" + variant]}
+      ${styles.btn} 
       ${full && "w-full"}
       ${className}
       `
