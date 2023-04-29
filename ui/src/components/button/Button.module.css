@@ -1,6 +1,6 @@
 .btn {
   -webkit-tap-highlight-color: transparent;
-  @apply relative flex justify-center py-4 text-sm text-white transition duration-300 rounded-sm px-28 bg-primary;
+  @apply relative flex justify-center px-4 py-4 text-sm text-white transition duration-300 rounded-sm bg-primary;
 }
 
 .btn:hover {

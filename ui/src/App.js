@@ -4,13 +4,13 @@ import Logo from "./assets/icons/logo.svg";
 
 function App() {
   return (
-    <div className="px-24 py-8 wrapper">
+    <div className="relative px-24 py-8 overflow-hidden wrapper">
       <header>
         <h1 className="text-3xl">
           <img className="my-[0] mx-auto w-[200px]" src={Logo} />
         </h1>
       </header>
-      <main className="mt-8">
+      <main className="mt-8 ">
         <QuestionForm />
       </main>
     </div>
